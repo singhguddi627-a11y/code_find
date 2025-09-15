@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Finder - Disha Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">Disha Guide</a>
+                    <span class="ml-2 text-sm text-gray-600">दिशा गाइड</span>
+                </div>
+                <a href="index.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- College Finder Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">College Finder</h1>
+                <p class="text-xl text-gray-600">कॉलेज खोजक</p>
+                <p class="text-lg text-gray-700 mt-4">Find your perfect college with advanced search and filters</p>
+            </div>
+
+            <!-- Replaced search filters with department-wise tabs -->
+            <!-- Department Tabs -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <div class="border-b border-gray-200 mb-6">
+                    <nav class="-mb-px flex space-x-8 overflow-x-auto">
+                        <button onclick="showDepartment('engineering')" class="department-tab whitespace-nowrap py-2 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600" data-department="engineering">
+                            Engineering / इंजीनियरिंग
+                        </button>
+                        <button onclick="showDepartment('medical')" class="department-tab whitespace-nowrap py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" data-department="medical">
+                            Medical / मेडिकल
+                        </button>
+                        <button onclick="showDepartment('commerce')" class="department-tab whitespace-nowrap py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" data-department="commerce">
+                            Commerce / कॉमर्स
+                        </button>
+                        <button onclick="showDepartment('arts')" class="department-tab whitespace-nowrap py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" data-department="arts">
+                            Arts / कला
+                        </button>
+                        <button onclick="showDepartment('law')" class="department-tab whitespace-nowrap py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" data-department="law">
+                            Law / कानून
+                        </button>
+                        <button onclick="showDepartment('management')" class="department-tab whitespace-nowrap py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" data-department="management">
+                            Management / प्रबंधन
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Engineering Department -->
+                <div id="engineering" class="department-content">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Engineering Colleges</h2>
+                    <div class="space-y-4">
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('iit-delhi')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Indian Institute of Technology Delhi
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 2</p>
+                                </div>
+                                <a href="https://home.iitd.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="iit-delhi" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹2.5L/year</div>
+                                    <div><strong>Placement:</strong> ₹18L average</div>
+                                    <div><strong>Location:</strong> Hauz Khas, New Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (7.2x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('iit-bombay')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Indian Institute of Technology Bombay
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Mumbai • NIRF Rank: 3</p>
+                                </div>
+                                <a href="https://www.iitb.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="iit-bombay" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹2.5L/year</div>
+                                    <div><strong>Placement:</strong> ₹20L average</div>
+                                    <div><strong>Location:</strong> Powai, Mumbai</div>
+                                    <div><strong>ROI:</strong> Excellent (8x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('nit-trichy')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        National Institute of Technology Tiruchirappalli
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Tamil Nadu • NIRF Rank: 9</p>
+                                </div>
+                                <a href="https://www.nitt.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="nit-trichy" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.8L/year</div>
+                                    <div><strong>Placement:</strong> ₹12L average</div>
+                                    <div><strong>Location:</strong> Tiruchirappalli, Tamil Nadu</div>
+                                    <div><strong>ROI:</strong> Very Good (6.7x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('bits-pilani')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Birla Institute of Technology and Science Pilani
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Rajasthan • NIRF Rank: 25</p>
+                                </div>
+                                <a href="https://www.bits-pilani.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="bits-pilani" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹4.5L/year</div>
+                                    <div><strong>Placement:</strong> ₹15L average</div>
+                                    <div><strong>Location:</strong> Pilani, Rajasthan</div>
+                                    <div><strong>ROI:</strong> Good (3.3x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('dtu')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Delhi Technological University
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 36</p>
+                                </div>
+                                <a href="http://www.dtu.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="dtu" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.5L/year</div>
+                                    <div><strong>Placement:</strong> ₹10L average</div>
+                                    <div><strong>Location:</strong> Shahbad Daulatpur, Delhi</div>
+                                    <div><strong>ROI:</strong> Very Good (6.7x)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Department -->
+                <div id="medical" class="department-content hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Medical Colleges</h2>
+                    <div class="space-y-4">
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('aiims-delhi')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        All India Institute of Medical Sciences Delhi
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 1</p>
+                                </div>
+                                <a href="https://www.aiims.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="aiims-delhi" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.5L/year</div>
+                                    <div><strong>Placement:</strong> Government Jobs</div>
+                                    <div><strong>Location:</strong> Ansari Nagar, New Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('pgimer')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Post Graduate Institute of Medical Education and Research
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Chandigarh • NIRF Rank: 2</p>
+                                </div>
+                                <a href="https://pgimer.edu.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="pgimer" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.2L/year</div>
+                                    <div><strong>Placement:</strong> Government Jobs</div>
+                                    <div><strong>Location:</strong> Chandigarh</div>
+                                    <div><strong>ROI:</strong> Excellent</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('cmc-vellore')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Christian Medical College Vellore
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Tamil Nadu • NIRF Rank: 3</p>
+                                </div>
+                                <a href="https://www.cmch-vellore.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="cmc-vellore" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹8L/year</div>
+                                    <div><strong>Placement:</strong> Hospital Jobs</div>
+                                    <div><strong>Location:</strong> Vellore, Tamil Nadu</div>
+                                    <div><strong>ROI:</strong> Very Good</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('kgmu')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        King George's Medical University
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Uttar Pradesh • NIRF Rank: 4</p>
+                                </div>
+                                <a href="https://www.kgmcindia.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="kgmu" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.8L/year</div>
+                                    <div><strong>Placement:</strong> Government Jobs</div>
+                                    <div><strong>Location:</strong> Lucknow, Uttar Pradesh</div>
+                                    <div><strong>ROI:</strong> Very Good</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('bhu-medical')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Institute of Medical Sciences BHU
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Uttar Pradesh • NIRF Rank: 5</p>
+                                </div>
+                                <a href="https://www.bhu.ac.in/medical/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="bhu-medical" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.5L/year</div>
+                                    <div><strong>Placement:</strong> Government Jobs</div>
+                                    <div><strong>Location:</strong> Varanasi, Uttar Pradesh</div>
+                                    <div><strong>ROI:</strong> Very Good</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commerce Department -->
+                <div id="commerce" class="department-content hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Commerce Colleges</h2>
+                    <div class="space-y-4">
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('srcc')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Shri Ram College of Commerce
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 3</p>
+                                </div>
+                                <a href="https://www.srcc.du.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="srcc" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹25K/year</div>
+                                    <div><strong>Placement:</strong> ₹8L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (32x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('lsr')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Lady Shri Ram College for Women
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 4</p>
+                                </div>
+                                <a href="https://www.lsr.edu.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="lsr" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹20K/year</div>
+                                    <div><strong>Placement:</strong> ₹7L average</div>
+                                    <div><strong>Location:</strong> Lajpat Nagar, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (35x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('hansraj')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Hansraj College
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 12</p>
+                                </div>
+                                <a href="https://www.hansrajcollege.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="hansraj" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹18K/year</div>
+                                    <div><strong>Placement:</strong> ₹6L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (33x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('loyola-chennai')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Loyola College Chennai
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Tamil Nadu • NIRF Rank: 15</p>
+                                </div>
+                                <a href="https://www.loyolacollege.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="loyola-chennai" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹45K/year</div>
+                                    <div><strong>Placement:</strong> ₹5L average</div>
+                                    <div><strong>Location:</strong> Chennai, Tamil Nadu</div>
+                                    <div><strong>ROI:</strong> Very Good (11x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('christ-bangalore')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Christ University Bangalore
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Karnataka • NIRF Rank: 20</p>
+                                </div>
+                                <a href="https://christuniversity.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="christ-bangalore" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.2L/year</div>
+                                    <div><strong>Placement:</strong> ₹4.5L average</div>
+                                    <div><strong>Location:</strong> Bangalore, Karnataka</div>
+                                    <div><strong>ROI:</strong> Good (3.8x)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arts Department -->
+                <div id="arts" class="department-content hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Arts Colleges</h2>
+                    <div class="space-y-4">
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('stephens')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        St. Stephen's College
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 2</p>
+                                </div>
+                                <a href="https://www.ststephens.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="stephens" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹30K/year</div>
+                                    <div><strong>Placement:</strong> ₹6L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (20x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('hindu-college')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Hindu College
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 8</p>
+                                </div>
+                                <a href="https://www.hinducollege.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="hindu-college" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹22K/year</div>
+                                    <div><strong>Placement:</strong> ₹5L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (23x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('presidency-kolkata')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Presidency University Kolkata
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">West Bengal • NIRF Rank: 10</p>
+                                </div>
+                                <a href="https://www.presiuniv.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="presidency-kolkata" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹15K/year</div>
+                                    <div><strong>Placement:</strong> ₹4L average</div>
+                                    <div><strong>Location:</strong> Kolkata, West Bengal</div>
+                                    <div><strong>ROI:</strong> Excellent (27x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('miranda-house')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Miranda House
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 1</p>
+                                </div>
+                                <a href="https://www.mirandahouse.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="miranda-house" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹18K/year</div>
+                                    <div><strong>Placement:</strong> ₹5.5L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (31x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('ramjas')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Ramjas College
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 13</p>
+                                </div>
+                                <a href="https://www.ramjas.du.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="ramjas" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹20K/year</div>
+                                    <div><strong>Placement:</strong> ₹4.5L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (23x)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Law Department -->
+                <div id="law" class="department-content hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Law Colleges</h2>
+                    <div class="space-y-4">
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('nlsiu')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        National Law School of India University
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Karnataka • NIRF Rank: 1</p>
+                                </div>
+                                <a href="https://www.nls.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="nlsiu" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹2.5L/year</div>
+                                    <div><strong>Placement:</strong> ₹15L average</div>
+                                    <div><strong>Location:</strong> Bangalore, Karnataka</div>
+                                    <div><strong>ROI:</strong> Excellent (6x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('nalsar')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        NALSAR University of Law
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Telangana • NIRF Rank: 2</p>
+                                </div>
+                                <a href="https://www.nalsar.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="nalsar" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹2.2L/year</div>
+                                    <div><strong>Placement:</strong> ₹12L average</div>
+                                    <div><strong>Location:</strong> Hyderabad, Telangana</div>
+                                    <div><strong>ROI:</strong> Excellent (5.5x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('nujs')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        West Bengal National University of Juridical Sciences
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">West Bengal • NIRF Rank: 3</p>
+                                </div>
+                                <a href="https://www.nujs.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="nujs" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹1.8L/year</div>
+                                    <div><strong>Placement:</strong> ₹10L average</div>
+                                    <div><strong>Location:</strong> Kolkata, West Bengal</div>
+                                    <div><strong>ROI:</strong> Excellent (5.6x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('glu')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Gujarat National Law University
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Gujarat • NIRF Rank: 4</p>
+                                </div>
+                                <a href="https://www.gnlu.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="glu" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹2L/year</div>
+                                    <div><strong>Placement:</strong> ₹9L average</div>
+                                    <div><strong>Location:</strong> Gandhinagar, Gujarat</div>
+                                    <div><strong>ROI:</strong> Very Good (4.5x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('jgls')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Jindal Global Law School
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Haryana • NIRF Rank: 5</p>
+                                </div>
+                                <a href="https://jgu.edu.in/jgls/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="jgls" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹8L/year</div>
+                                    <div><strong>Placement:</strong> ₹12L average</div>
+                                    <div><strong>Location:</strong> Sonipat, Haryana</div>
+                                    <div><strong>ROI:</strong> Good (1.5x)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Management Department -->
+                <div id="management" class="department-content hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Management Colleges</h2>
+                    <div class="space-y-4">
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('iim-ahmedabad')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Indian Institute of Management Ahmedabad
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Gujarat • NIRF Rank: 1</p>
+                                </div>
+                                <a href="https://www.iima.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="iim-ahmedabad" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹25L/2 years</div>
+                                    <div><strong>Placement:</strong> ₹35L average</div>
+                                    <div><strong>Location:</strong> Ahmedabad, Gujarat</div>
+                                    <div><strong>ROI:</strong> Excellent (2.8x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('iim-bangalore')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Indian Institute of Management Bangalore
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Karnataka • NIRF Rank: 2</p>
+                                </div>
+                                <a href="https://www.iimb.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="iim-bangalore" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹24L/2 years</div>
+                                    <div><strong>Placement:</strong> ₹32L average</div>
+                                    <div><strong>Location:</strong> Bangalore, Karnataka</div>
+                                    <div><strong>ROI:</strong> Excellent (2.7x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('iim-calcutta')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Indian Institute of Management Calcutta
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">West Bengal • NIRF Rank: 3</p>
+                                </div>
+                                <a href="https://www.iimcal.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="iim-calcutta" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹27L/2 years</div>
+                                    <div><strong>Placement:</strong> ₹31L average</div>
+                                    <div><strong>Location:</strong> Kolkata, West Bengal</div>
+                                    <div><strong>ROI:</strong> Excellent (2.3x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('xlri')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Xavier Labour Relations Institute
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">Jharkhand • NIRF Rank: 9</p>
+                                </div>
+                                <a href="https://www.xlri.ac.in/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="xlri" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹25L/2 years</div>
+                                    <div><strong>Placement:</strong> ₹28L average</div>
+                                    <div><strong>Location:</strong> Jamshedpur, Jharkhand</div>
+                                    <div><strong>ROI:</strong> Very Good (2.2x)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-item border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <button onclick="toggleDetails('fms-delhi')" class="text-lg font-semibold text-blue-600 hover:text-blue-800 text-left">
+                                        Faculty of Management Studies Delhi
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-1">New Delhi • NIRF Rank: 11</p>
+                                </div>
+                                <a href="https://www.fms.edu/" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                    Visit Website
+                                </a>
+                            </div>
+                            <div id="fms-delhi" class="college-details hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div><strong>Fees:</strong> ₹20K/2 years</div>
+                                    <div><strong>Placement:</strong> ₹32L average</div>
+                                    <div><strong>Location:</strong> North Campus, Delhi</div>
+                                    <div><strong>ROI:</strong> Excellent (160x)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Added JavaScript for tab functionality and college details toggle -->
+    <script>
+        function showDepartment(department) {
+            // Hide all department content
+            const contents = document.querySelectorAll('.department-content');
+            contents.forEach(content => content.classList.add('hidden'));
+           
+            // Show selected department
+            document.getElementById(department).classList.remove('hidden');
+           
+            // Update tab styles
+            const tabs = document.querySelectorAll('.department-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('border-blue-500', 'text-blue-600');
+                tab.classList.add('border-transparent', 'text-gray-500');
+            });
+           
+            // Highlight active tab
+            const activeTab = document.querySelector(`[data-department="${department}"]`);
+            activeTab.classList.remove('border-transparent', 'text-gray-500');
+            activeTab.classList.add('border-blue-500', 'text-blue-600');
+        }
+
+        function toggleDetails(collegeId) {
+            const details = document.getElementById(collegeId);
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+            } else {
+                details.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Colleges Near Me - Disha Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Disha Guide</h1>
+                    <span class="ml-2 text-sm text-gray-600">दिशा गाइड</span>
+                </div>
+                <a href="index.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Page Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Affordable Colleges Near Me</h2>
+                <p class="text-2xl text-gray-600">मेरे नज़दीकी किफ़ायती कॉलेज</p>
+                <p class="text-lg text-gray-500 mt-4">Select your state to find budget-friendly colleges / अपना राज्य चुनें</p>
+            </div>
+
+            <!-- Updated states grid with accordion functionality and data attributes -->
+            <div id="states-accordion" class="space-y-4">
+                <!-- Andhra Pradesh -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Andhra Pradesh">
+                    <button onclick="toggleState('andhra-pradesh')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="andhra-pradesh-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Andhra Pradesh</h3>
+                            <p class="text-sm text-gray-500">आंध्र प्रदेश</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="andhra-pradesh-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="andhra-pradesh">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="andhra-univ">
+                                <button onclick="toggleCollegeDetails('andhra-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Andhra University</h4>
+                                    <p class="text-sm text-gray-600">₹45,000/year • Visakhapatnam</p>
+                                </button>
+                                <div id="andhra-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Visakhapatnam, Andhra Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 72% placement rate with avg package ₹4.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Excellent value for money, strong alumni network</p>
+                                    <a href="https://www.andhrauniversity.edu.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="jntu-kakinada">
+                                <button onclick="toggleCollegeDetails('jntu-kakinada-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">JNTU Kakinada</h4>
+                                    <p class="text-sm text-gray-600">₹65,000/year • Kakinada</p>
+                                </button>
+                                <div id="jntu-kakinada-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kakinada, Andhra Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 78% placement rate with avg package ₹5.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Good technical programs, industry connections</p>
+                                    <a href="https://www.jntuk.edu.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="sri-venkateswara">
+                                <button onclick="toggleCollegeDetails('sri-venkateswara-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Sri Venkateswara University</h4>
+                                    <p class="text-sm text-gray-600">₹50,000/year • Tirupati</p>
+                                </button>
+                                <div id="sri-venkateswara-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Tirupati, Andhra Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 68% placement rate with avg package ₹4.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Affordable fees, decent placement support</p>
+                                    <a href="https://www.svuniversity.edu.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="rayalaseema-univ">
+                                <button onclick="toggleCollegeDetails('rayalaseema-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Rayalaseema University</h4>
+                                    <p class="text-sm text-gray-600">₹55,000/year • Kurnool</p>
+                                </button>
+                                <div id="rayalaseema-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kurnool, Andhra Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 65% placement rate with avg package ₹3.8L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Budget-friendly option with growing industry ties</p>
+                                    <a href="https://www.ruk.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bihar -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Bihar">
+                    <button onclick="toggleState('bihar')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="bihar-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Bihar</h3>
+                            <p class="text-sm text-gray-500">बिहार</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="bihar-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="bihar">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="nit-patna">
+                                <button onclick="toggleCollegeDetails('nit-patna-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">NIT Patna</h4>
+                                    <p class="text-sm text-gray-600">₹1,50,000/year • Patna</p>
+                                </button>
+                                <div id="nit-patna-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Patna, Bihar</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 85% placement rate with avg package ₹8.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier technical institute, excellent career prospects</p>
+                                    <a href="https://www.nitp.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="patna-univ">
+                                <button onclick="toggleCollegeDetails('patna-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Patna University</h4>
+                                    <p class="text-sm text-gray-600">₹25,000/year • Patna</p>
+                                </button>
+                                <div id="patna-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Patna, Bihar</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 60% placement rate with avg package ₹3.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Very affordable, historic institution with good reputation</p>
+                                    <a href="https://www.patnauniversity.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="bihar-engineering">
+                                <button onclick="toggleCollegeDetails('bihar-engineering-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Bihar College of Engineering</h4>
+                                    <p class="text-sm text-gray-600">₹80,000/year • Patna</p>
+                                </button>
+                                <div id="bihar-engineering-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Patna, Bihar</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 70% placement rate with avg package ₹4.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Government college with reasonable fees and good placement</p>
+                                    <a href="https://www.bce.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="magadh-univ">
+                                <button onclick="toggleCollegeDetails('magadh-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Magadh University</h4>
+                                    <p class="text-sm text-gray-600">₹30,000/year • Bodh Gaya</p>
+                                </button>
+                                <div id="magadh-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Bodh Gaya, Bihar</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 55% placement rate with avg package ₹2.8L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Very low fees, suitable for budget-conscious students</p>
+                                    <a href="https://www.magadhuniversity.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="tilka-manjhi">
+                                <button onclick="toggleCollegeDetails('tilka-manjhi-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Tilka Manjhi Bhagalpur University</h4>
+                                    <p class="text-sm text-gray-600">₹35,000/year • Bhagalpur</p>
+                                </button>
+                                <div id="tilka-manjhi-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Bhagalpur, Bihar</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 58% placement rate with avg package ₹3.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Affordable education with decent career opportunities</p>
+                                    <a href="https://www.tmbu.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delhi -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Delhi">
+                    <button onclick="toggleState('delhi')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="delhi-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Delhi</h3>
+                            <p class="text-sm text-gray-500">दिल्ली</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="delhi-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="delhi">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="delhi-univ">
+                                <button onclick="toggleCollegeDetails('delhi-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Delhi University</h4>
+                                    <p class="text-sm text-gray-600">₹50,000/year • Delhi</p>
+                                </button>
+                                <div id="delhi-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Delhi</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 75% placement rate with avg package ₹6.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Prestigious university with excellent value for money</p>
+                                    <a href="https://www.du.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="jamia-millia">
+                                <button onclick="toggleCollegeDetails('jamia-millia-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Jamia Millia Islamia</h4>
+                                    <p class="text-sm text-gray-600">₹80,000/year • Delhi</p>
+                                </button>
+                                <div id="jamia-millia-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Delhi</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 78% placement rate with avg package ₹6.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Central university with strong industry connections</p>
+                                    <a href="https://www.jmi.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="igdtuw">
+                                <button onclick="toggleCollegeDetails('igdtuw-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">IGDTUW</h4>
+                                    <p class="text-sm text-gray-600">₹1,50,000/year • Delhi</p>
+                                </button>
+                                <div id="igdtuw-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Delhi</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 85% placement rate with avg package ₹7.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier technical university for women with excellent placements</p>
+                                    <a href="https://www.igdtuw.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="dtu">
+                                <button onclick="toggleCollegeDetails('dtu-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Delhi Technological University</h4>
+                                    <p class="text-sm text-gray-600">₹2,00,000/year • Delhi</p>
+                                </button>
+                                <div id="dtu-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Delhi</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 95% placement rate with avg package ₹12.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Top-tier technical university with outstanding career prospects</p>
+                                    <a href="https://www.dtu.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="nsut">
+                                <button onclick="toggleCollegeDetails('nsut-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">NSUT</h4>
+                                    <p class="text-sm text-gray-600">₹1,80,000/year • Delhi</p>
+                                </button>
+                                <div id="nsut-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Delhi</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 90% placement rate with avg package ₹10.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Excellent technical education with strong industry partnerships</p>
+                                    <a href="https://www.nsut.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gujarat -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Gujarat">
+                    <button onclick="toggleState('gujarat')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="gujarat-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Gujarat</h3>
+                            <p class="text-sm text-gray-500">गुजरात</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="gujarat-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="gujarat">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="gujarat-univ">
+                                <button onclick="toggleCollegeDetails('gujarat-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Gujarat University</h4>
+                                    <p class="text-sm text-gray-600">₹40,000/year • Ahmedabad</p>
+                                </button>
+                                <div id="gujarat-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Ahmedabad, Gujarat</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 68% placement rate with avg package ₹4.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Very affordable with good industry exposure in Gujarat</p>
+                                    <a href="https://www.gujaratuniversity.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="sardar-patel">
+                                <button onclick="toggleCollegeDetails('sardar-patel-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Sardar Patel University</h4>
+                                    <p class="text-sm text-gray-600">₹55,000/year • Vallabh Vidyanagar</p>
+                                </button>
+                                <div id="sardar-patel-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Vallabh Vidyanagar, Gujarat</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 72% placement rate with avg package ₹4.8L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Well-established university with strong alumni network</p>
+                                    <a href="https://www.spuvvn.edu" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="ms-univ-baroda">
+                                <button onclick="toggleCollegeDetails('ms-univ-baroda-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">MS University of Baroda</h4>
+                                    <p class="text-sm text-gray-600">₹60,000/year • Vadodara</p>
+                                </button>
+                                <div id="ms-univ-baroda-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Vadodara, Gujarat</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 75% placement rate with avg package ₹5.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Prestigious university with excellent research facilities</p>
+                                    <a href="https://www.msubaroda.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="ld-engineering">
+                                <button onclick="toggleCollegeDetails('ld-engineering-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">LD College of Engineering</h4>
+                                    <p class="text-sm text-gray-600">₹85,000/year • Ahmedabad</p>
+                                </button>
+                                <div id="ld-engineering-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Ahmedabad, Gujarat</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 80% placement rate with avg package ₹6.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier engineering college with strong industry connections</p>
+                                    <a href="https://www.ldce.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Karnataka -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Karnataka">
+                    <button onclick="toggleState('karnataka')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="karnataka-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Karnataka</h3>
+                            <p class="text-sm text-gray-500">कर्नाटक</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="karnataka-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="karnataka">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="bangalore-univ">
+                                <button onclick="toggleCollegeDetails('bangalore-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Bangalore University</h4>
+                                    <p class="text-sm text-gray-600">₹90,000/year • Bangalore</p>
+                                </button>
+                                <div id="bangalore-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Bangalore, Karnataka</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 72% placement rate with avg package ₹5.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Located in IT hub with excellent industry exposure</p>
+                                    <a href="https://www.bangaloreuniversity.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="mysore-univ">
+                                <button onclick="toggleCollegeDetails('mysore-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">University of Mysore</h4>
+                                    <p class="text-sm text-gray-600">₹70,000/year • Mysore</p>
+                                </button>
+                                <div id="mysore-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Mysore, Karnataka</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 68% placement rate with avg package ₹4.8L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Historic university with affordable fees and good reputation</p>
+                                    <a href="https://www.uni-mysore.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="uvce">
+                                <button onclick="toggleCollegeDetails('uvce-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">UVCE Bangalore</h4>
+                                    <p class="text-sm text-gray-600">₹1,20,000/year • Bangalore</p>
+                                </button>
+                                <div id="uvce-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Bangalore, Karnataka</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 88% placement rate with avg package ₹8.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier government engineering college with excellent placements</p>
+                                    <a href="https://www.uvce.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="gec-hassan">
+                                <button onclick="toggleCollegeDetails('gec-hassan-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Government Engineering College, Hassan</h4>
+                                    <p class="text-sm text-gray-600">₹80,000/year • Hassan</p>
+                                </button>
+                                <div id="gec-hassan-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Hassan, Karnataka</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 75% placement rate with avg package ₹5.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Government college with affordable fees and decent placements</p>
+                                    <a href="https://www.gechassan.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="bms-college">
+                                <button onclick="toggleCollegeDetails('bms-college-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">BMS College of Engineering</h4>
+                                    <p class="text-sm text-gray-600">₹2,50,000/year • Bangalore</p>
+                                </button>
+                                <div id="bms-college-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Bangalore, Karnataka</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 92% placement rate with avg package ₹9.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Top private engineering college with outstanding career prospects</p>
+                                    <a href="https://www.bmsce.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maharashtra -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Maharashtra">
+                    <button onclick="toggleState('maharashtra')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="maharashtra-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Maharashtra</h3>
+                            <p class="text-sm text-gray-500">महाराष्ट्र</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="maharashtra-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="maharashtra">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="govt-poly-mumbai">
+                                <button onclick="toggleCollegeDetails('govt-poly-mumbai-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Government Polytechnic, Mumbai</h4>
+                                    <p class="text-sm text-gray-600">₹50,000/year • Mumbai</p>
+                                </button>
+                                <div id="govt-poly-mumbai-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Mumbai, Maharashtra</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 75% placement rate with avg package ₹4.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Very affordable with good industry connections in Mumbai</p>
+                                    <a href="https://www.gpbom.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="bamu">
+                                <button onclick="toggleCollegeDetails('bamu-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Dr. Babasaheb Ambedkar Marathwada University</h4>
+                                    <p class="text-sm text-gray-600">₹60,000/year • Aurangabad</p>
+                                </button>
+                                <div id="bamu-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Aurangabad, Maharashtra</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 65% placement rate with avg package ₹4.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Affordable state university with decent career opportunities</p>
+                                    <a href="https://www.bamu.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="shivaji-univ">
+                                <button onclick="toggleCollegeDetails('shivaji-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Shivaji University</h4>
+                                    <p class="text-sm text-gray-600">₹80,000/year • Kolhapur</p>
+                                </button>
+                                <div id="shivaji-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kolhapur, Maharashtra</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 70% placement rate with avg package ₹4.8L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Well-established university with good academic reputation</p>
+                                    <a href="https://www.unishivaji.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="coep">
+                                <button onclick="toggleCollegeDetails('coep-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Government College of Engineering, Pune</h4>
+                                    <p class="text-sm text-gray-600">₹1,50,000/year • Pune</p>
+                                </button>
+                                <div id="coep-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Pune, Maharashtra</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 85% placement rate with avg package ₹7.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier engineering college with excellent industry connections</p>
+                                    <a href="https://www.coep.org.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="vjti">
+                                <button onclick="toggleCollegeDetails('vjti-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Veermata Jijabai Technological Institute</h4>
+                                    <p class="text-sm text-gray-600">₹2,00,000/year • Mumbai</p>
+                                </button>
+                                <div id="vjti-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Mumbai, Maharashtra</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 90% placement rate with avg package ₹8.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Top engineering institute with outstanding placement record</p>
+                                    <a href="https://www.vjti.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tamil Nadu -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Tamil Nadu">
+                    <button onclick="toggleState('tamil-nadu')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="tamil-nadu-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Tamil Nadu</h3>
+                            <p class="text-sm text-gray-500">तमिल नाडु</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="tamil-nadu-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="tamil-nadu">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="bharathidasan-univ">
+                                <button onclick="toggleCollegeDetails('bharathidasan-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Bharathidasan University</h4>
+                                    <p class="text-sm text-gray-600">₹55,000/year • Tiruchirappalli</p>
+                                </button>
+                                <div id="bharathidasan-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Tiruchirappalli, Tamil Nadu</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 65% placement rate with avg package ₹4.2L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Affordable state university with good academic programs</p>
+                                    <a href="https://www.bdu.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="madurai-kamaraj">
+                                <button onclick="toggleCollegeDetails('madurai-kamaraj-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Madurai Kamaraj University</h4>
+                                    <p class="text-sm text-gray-600">₹60,000/year • Madurai</p>
+                                </button>
+                                <div id="madurai-kamaraj-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Madurai, Tamil Nadu</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 70% placement rate with avg package ₹4.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Well-established university with strong regional presence</p>
+                                    <a href="https://www.mkuniversity.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="gct-coimbatore">
+                                <button onclick="toggleCollegeDetails('gct-coimbatore-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Government College of Technology, Coimbatore</h4>
+                                    <p class="text-sm text-gray-600">₹80,000/year • Coimbatore</p>
+                                </button>
+                                <div id="gct-coimbatore-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 80% placement rate with avg package ₹6.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier government engineering college with excellent placements</p>
+                                    <a href="https://www.gct.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="ceg-anna">
+                                <button onclick="toggleCollegeDetails('ceg-anna-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">College of Engineering, Guindy</h4>
+                                    <p class="text-sm text-gray-600">₹1,00,000/year • Chennai</p>
+                                </button>
+                                <div id="ceg-anna-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 90% placement rate with avg package ₹8.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Top engineering college under Anna University with outstanding placements</p>
+                                    <a href="https://www.ceg.annauniv.edu" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="mit-chennai">
+                                <button onclick="toggleCollegeDetails('mit-chennai-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Madras Institute of Technology</h4>
+                                    <p class="text-sm text-gray-600">₹1,50,000/year • Chennai</p>
+                                </button>
+                                <div id="mit-chennai-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 85% placement rate with avg package ₹7.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Prestigious technical institute with strong industry partnerships</p>
+                                    <a href="https://www.mitindia.edu" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uttar Pradesh -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="Uttar Pradesh">
+                    <button onclick="toggleState('uttar-pradesh')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="uttar-pradesh-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">Uttar Pradesh</h3>
+                            <p class="text-sm text-gray-500">उत्तर प्रदेश</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="uttar-pradesh-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="uttar-pradesh">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="bundelkhand-univ">
+                                <button onclick="toggleCollegeDetails('bundelkhand-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Bundelkhand University</h4>
+                                    <p class="text-sm text-gray-600">₹40,000/year • Jhansi</p>
+                                </button>
+                                <div id="bundelkhand-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Jhansi, Uttar Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 60% placement rate with avg package ₹3.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Very affordable with decent career opportunities</p>
+                                    <a href="https://www.bujhansi.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="lucknow-univ">
+                                <button onclick="toggleCollegeDetails('lucknow-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">University of Lucknow</h4>
+                                    <p class="text-sm text-gray-600">₹50,000/year • Lucknow</p>
+                                </button>
+                                <div id="lucknow-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Lucknow, Uttar Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 65% placement rate with avg package ₹4.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Historic university with good academic reputation</p>
+                                    <a href="https://www.lkouniv.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="amu">
+                                <button onclick="toggleCollegeDetails('amu-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Aligarh Muslim University</h4>
+                                    <p class="text-sm text-gray-600">₹70,000/year • Aligarh</p>
+                                </button>
+                                <div id="amu-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Aligarh, Uttar Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 72% placement rate with avg package ₹5.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Central university with strong alumni network and good placements</p>
+                                    <a href="https://www.amu.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="hbtu">
+                                <button onclick="toggleCollegeDetails('hbtu-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Harcourt Butler Technical University</h4>
+                                    <p class="text-sm text-gray-600">₹1,20,000/year • Kanpur</p>
+                                </button>
+                                <div id="hbtu-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kanpur, Uttar Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 80% placement rate with avg package ₹6.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier technical university with excellent industry connections</p>
+                                    <a href="https://www.hbtu.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="iiita">
+                                <button onclick="toggleCollegeDetails('iiita-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">IIIT Allahabad</h4>
+                                    <p class="text-sm text-gray-600">₹2,50,000/year • Allahabad</p>
+                                </button>
+                                <div id="iiita-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Allahabad, Uttar Pradesh</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 98% placement rate with avg package ₹15.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Top-tier technical institute with outstanding career prospects</p>
+                                    <a href="https://www.iiita.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- West Bengal -->
+                <div class="bg-white rounded-lg shadow-lg" data-state="West Bengal">
+                    <button onclick="toggleState('west-bengal')" class="w-full p-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="west-bengal-colleges" role="button" tabindex="0">
+                        <div>
+                            <h3 class="font-semibold text-blue-600 text-lg">West Bengal</h3>
+                            <p class="text-sm text-gray-500">पश्चिम बंगाल</p>
+                        </div>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="west-bengal-colleges" class="hidden p-4 border-t bg-gray-50" role="region" aria-labelledby="west-bengal">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="kalyani-univ">
+                                <button onclick="toggleCollegeDetails('kalyani-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">University of Kalyani</h4>
+                                    <p class="text-sm text-gray-600">₹35,000/year • Kalyani</p>
+                                </button>
+                                <div id="kalyani-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kalyani, West Bengal</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 60% placement rate with avg package ₹3.8L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Very affordable state university with decent opportunities</p>
+                                    <a href="https://www.klyuniv.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="calcutta-univ">
+                                <button onclick="toggleCollegeDetails('calcutta-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">University of Calcutta</h4>
+                                    <p class="text-sm text-gray-600">₹45,000/year • Kolkata</p>
+                                </button>
+                                <div id="calcutta-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kolkata, West Bengal</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 68% placement rate with avg package ₹4.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Historic university with strong academic reputation</p>
+                                    <a href="https://www.caluniv.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="gcect">
+                                <button onclick="toggleCollegeDetails('gcect-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Government College of Engineering & Ceramic Technology</h4>
+                                    <p class="text-sm text-gray-600">₹80,000/year • Kolkata</p>
+                                </button>
+                                <div id="gcect-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kolkata, West Bengal</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 75% placement rate with avg package ₹5.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Government engineering college with good placement record</p>
+                                    <a href="https://www.gcect.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="besu">
+                                <button onclick="toggleCollegeDetails('besu-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Bengal Engineering and Science University</h4>
+                                    <p class="text-sm text-gray-600">₹1,50,000/year • Howrah</p>
+                                </button>
+                                <div id="besu-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Howrah, West Bengal</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 88% placement rate with avg package ₹7.0L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Premier engineering university with excellent industry connections</p>
+                                    <a href="https://www.becs.ac.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow" data-college-id="jadavpur-univ">
+                                <button onclick="toggleCollegeDetails('jadavpur-univ-details')" class="w-full text-left">
+                                    <h4 class="font-semibold text-blue-600 hover:text-blue-800">Jadavpur University</h4>
+                                    <p class="text-sm text-gray-600">₹1,00,000/year • Kolkata</p>
+                                </button>
+                                <div id="jadavpur-univ-details" class="hidden mt-3 pt-3 border-t">
+                                    <p class="text-sm mb-2"><strong>Location:</strong> Kolkata, West Bengal</p>
+                                    <p class="text-sm mb-2"><strong>Placement:</strong> 92% placement rate with avg package ₹8.5L</p>
+                                    <p class="text-sm mb-3"><strong>ROI:</strong> Top-tier university with outstanding academic and placement record</p>
+                                    <a href="https://www.jaduniv.edu.in" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Updated JavaScript with accordion functionality and college detail toggles -->
+    <script>
+        function toggleState(stateId) {
+            const collegesDiv = document.getElementById(stateId + '-colleges');
+            const button = collegesDiv.previousElementSibling;
+            const arrow = button.querySelector('svg');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+           
+            // Close all other states
+            document.querySelectorAll('[id$="-colleges"]').forEach(div => {
+                if (div.id !== stateId + '-colleges') {
+                    div.classList.add('hidden');
+                    const otherButton = div.previousElementSibling;
+                    const otherArrow = otherButton.querySelector('svg');
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    otherArrow.style.transform = 'rotate(0deg)';
+                }
+            });
+           
+            if (isExpanded) {
+                collegesDiv.classList.add('hidden');
+                button.setAttribute('aria-expanded', 'false');
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                collegesDiv.classList.remove('hidden');
+                button.setAttribute('aria-expanded', 'true');
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function toggleCollegeDetails(detailsId) {
+            const detailsDiv = document.getElementById(detailsId);
+            const isHidden = detailsDiv.classList.contains('hidden');
+           
+            // Close all other college details in the same state
+            const parentGrid = detailsDiv.closest('.grid');
+            parentGrid.querySelectorAll('[id$="-details"]').forEach(div => {
+                if (div.id !== detailsId) {
+                    div.classList.add('hidden');
+                }
+            });
+           
+            if (isHidden) {
+                detailsDiv.classList.remove('hidden');
+            } else {
+                detailsDiv.classList.add('hidden');
+            }
+        }
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const target = e.target;
+                if (target.hasAttribute('onclick')) {
+                    e.preventDefault();
+                    target.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
